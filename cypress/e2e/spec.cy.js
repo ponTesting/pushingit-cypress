@@ -27,7 +27,7 @@ describe('PRE ENTREGA', () => {
   it('Agregar 2 productos y verificar nombre y precio', () => {
     productsPage.addToCart(datos.product1.name);
     productsPage.addToCart(datos.product2.name);
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('#goShoppingCart').click();
     shoppingCart.verifyProduct(datos.product1.name, datos.product1.price);
     shoppingCart.verifyProduct(datos.product2.name, datos.product2.price);
