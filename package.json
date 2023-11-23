@@ -4,6 +4,7 @@
     "cypress-xpath": "^2.0.1"
   },
   "scripts": {
-    "test": "npx cypress open"
+    "test": "npx cypress open",
+    "start": "npx cypress open"
   }
 }
