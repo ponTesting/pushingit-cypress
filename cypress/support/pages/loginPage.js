@@ -6,15 +6,23 @@ export class LoginPage {
     this.loginButton = '#submitForm';
   }
 
-  typeUser(user) {
-    cy.get(this.user).type(user);
+  typeUser(usuario) {
+    cy.get(this.user).type(usuario);
   }
 
-  typePass(pass) {
-    cy.get(this.pass).type(pass);
+  typePass(contra) {
+    cy.get(this.pass).type(contra);
   }
 
   clickLogIn() {
+    cy.get(this.loginButton).click();
+  }
+
+  clickIniciaSesion() {
+    cy.get(this.iniciaSesion).dblclick();
+  }
+
+  clickLogin() {
     cy.get(this.loginButton).click();
   }
 }

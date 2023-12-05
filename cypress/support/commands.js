@@ -23,3 +23,19 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('crearTablero', (nombre) => {
+  cy.request({
+    url: 'http://localhost:3000/api/boards',
+    method: 'POST',
+    body: {
+      name: nombre,
+    },
+  });
+});
+
+Cypress.Commands.add('eliminarTableros', (id) => {
+  cy.request({
+    url: `http://localhost:3000/api/boards/${id}`,
+    method: 'DELETE',
+  });
+});

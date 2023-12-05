@@ -1,0 +1,7 @@
+{
+  "data": {
+    "username": "inexistente",
+    "password": "123456!",
+    "errorMessage": "Credentials were not found"
+  }
+}
